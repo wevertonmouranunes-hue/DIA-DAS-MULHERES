@@ -1,0 +1,113 @@
+<html>
+ <head>  
+ </head> 
+ <body> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Feliz Dia da Mulher</title> 
+  <style>
+body{
+font-family: Arial, sans-serif;
+margin:0;
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#ffe4ec,#f8bbd0);
+text-align:center;
+}
+
+.container{
+background:white;
+padding:40px;
+border-radius:20px;
+max-width:500px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1{
+margin-bottom:5px;
+}
+
+.message{
+font-size:20px;
+font-style:italic;
+margin:20px 0;
+}
+
+.author{
+color:#666;
+font-size:14px;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#ec407a;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#d81b60;
+}
+
+footer{
+margin-top:30px;
+font-size:12px;
+color:#555;
+}
+</style> 
+  <div class="container"> 
+   <h1>Feliz Dia da Mulher</h1> 
+   <p>8 de Março 💖</p> 
+   <div class="message" id="message"></div> 
+   <div class="author" id="author"></div> 
+   <button onclick="newMessage()">Nova mensagem</button> 
+  </div> 
+  <footer>
+    Feito com ❤️ para todas as mulheres 
+  </footer> 
+  <script>
+
+const messages = [
+
+{ text:"Você é mais forte do que imagina, mais corajosa do que acredita e mais amada do que sabe.", author:"A. A. Milne (adaptado)"},
+
+{ text:"Uma mulher com voz é, por definição, uma mulher forte.", author:"Melinda Gates"},
+
+{ text:"Não há limite para o que nós, como mulheres, podemos realizar.", author:"Michelle Obama"},
+
+{ text:"Ela acreditou que podia, então ela fez.", author:"R.S. Grey"},
+
+{ text:"Ser mulher é um superpoder. Nunca se esqueça disso.", author:"Desconhecido"},
+
+{ text:"Onde há uma mulher, há magia.", author:"Ntozake Shange"},
+
+{ text:"Nunca subestime o poder de uma mulher determinada.", author:"Desconhecido"},
+
+{ text:"Hoje e todos os dias, celebre a mulher incrível que você é.", author:"Desconhecido"}
+
+];
+
+function newMessage(){
+
+const random = messages[Math.floor(Math.random()*messages.length)];
+
+document.getElementById("message").innerText = `"${random.text}"`;
+
+document.getElementById("author").innerText = "— "+random.author;
+
+}
+
+newMessage();
+
+</script>   
+ </body>
+</html>
